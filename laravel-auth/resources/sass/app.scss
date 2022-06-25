@@ -7,11 +7,7 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-// Font awesome
-
-$fa-font-path: "../fonts/font-awesome" !default;
-
-@import "~@fortawesome/fontawesome-free/scss/fontawesome";
-@import "~@fortawesome/fontawesome-free/scss/regular";
-@import "~@fortawesome/fontawesome-free/scss/solid";
-@import "~@fortawesome/fontawesome-free/scss/brands";
+$fa-font-path: '../fonts/font-awesome' !default;
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/regular.scss';
