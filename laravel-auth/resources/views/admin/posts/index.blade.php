@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
+<a href="{{route('admin.posts.create')}}" class="btn btn-success">Crea nuovo post</a>
 <div class="container">
   <table class="table table-striped">
     <thead>
@@ -17,7 +18,7 @@
         <td><a href="{{route('admin.posts.show', $post->id)}}">{{$post->id}}</a></td>
         <td><a href="{{route('admin.posts.show', $post->id)}}">{{$post->title}}</a></td>
         <td>{{$post->created_at}}</td>
-        <td><a href="{{route('admin.posts.show', $post->id)}}" class="btn btn-warning">Modifica</a></td>
+        <td><a href="{{route('admin.posts.edit')}}" class="btn btn-warning">Modifica</a></td>
       </tr>
       @endforeach
       
