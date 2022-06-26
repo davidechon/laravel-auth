@@ -1,39 +1,26 @@
-@extends('layouts.admin');
+@extends('layouts.admin')
 
 @section('content')
-<div class="content">
+<div class="container">
   <table class="table table-striped">
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">title</th>
-        <th scope="col">slug</th>
-        <th scope="col">content</th>
-        <th scope="col">published</th>
+        <th scope="col">Title</th>
+        <th scope="col">Creation date</th>
+        <th scope="col">Modifica</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody>  
+      @foreach ($posts as $post)
       <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
+        <td><a href="{{route('admin.posts.show', $post->id)}}">{{$post->id}}</a></td>
+        <td><a href="{{route('admin.posts.show', $post->id)}}">{{$post->title}}</a></td>
+        <td>{{$post->created_at}}</td>
+        <td><a href="{{route('admin.posts.show', $post->id)}}" class="btn btn-warning">Modifica</a></td>
       </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>Thornton</td>
-        <td>Thornton</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>the Bird</td>
-        <td>the Bird</td>
-      </tr>
+      @endforeach
+      
     </tbody>
   </table>
 </div>
